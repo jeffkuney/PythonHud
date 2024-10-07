@@ -20,3 +20,8 @@ Thumbs.db
 # Ignore logs or other temp files
 *.log
 *.tmp
+
+
+# Ignore Shortcuts
+*.exe
+*.exe.lnk
