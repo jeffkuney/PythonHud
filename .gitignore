@@ -25,3 +25,7 @@ Thumbs.db
 # Ignore Shortcuts
 *.exe
 *.exe.lnk
+
+# Ignore Directories
+build/
+dist/
