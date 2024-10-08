@@ -9,6 +9,11 @@
             "name": "Tuber",
             "age": 10,
             "favorite_color": "Red"
+        },
+        {
+            "name": "Roth",
+            "age": 100,
+            "favorite_color": "Purple"
         }
     ]
 }
