@@ -48,6 +48,9 @@ def save_input_to_json():
     age_entry.delete(0, tk.END)
     color_entry.delete(0, tk.END)
 
+    # Update the list of previous entries
+    update_previous_entries()
+
 #====================================== Load Inputs #
 def update_previous_entries():
     if os.path.exists("user_data.json"):
