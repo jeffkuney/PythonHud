@@ -1,22 +1,32 @@
+import json
 import tkinter as tk
 from tkinter import messagebox
-import json
+import os
+
 
 def save_input_to_json():
-    user_input = input_entry.get()
+    user_input = input_entry.get().strip()
 
     if not user_input.strip():
         messagebox.showwarning("User Error", "Truly apply thyself")
         return
 
-    # Create a dictionary with the input
-    data = {"user_input": user_input}
+    # Create or load the JSON file
+    if os.path.exists("user_names.json"):
+        with open("user_names.json", "r") as json_file:
+            data = json.load(json_file)
+    else:
+        data = {"names": []}
 
-    # Save to a JSON file
-    with open("user_input.json", "w") as json_file:
+    # Append the new name to the list
+    data["names"].append(user_input)
+
+    # Save the updated data back to the JSON file
+    with open("user_names.json", "w") as json_file:
         json.dump(data, json_file, indent=4)
 
-    messagebox.showinfo("Joy", "Thine words have been immortalized in 'user_input.json'.")
+    messagebox.showinfo("Joy", f"'{user_input}' has been immortalized in 'user_names.json'.")
+    input_entry.delete(0, tk.END)  # Clear the input field after saving
 
 
 #========================================================================#
