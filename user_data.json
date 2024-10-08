@@ -1,0 +1,14 @@
+{
+    "users": [
+        {
+            "name": "Helga",
+            "age": 39,
+            "favorite_color": "Asphalt"
+        },
+        {
+            "name": "Tuber",
+            "age": 10,
+            "favorite_color": "Red"
+        }
+    ]
+}
